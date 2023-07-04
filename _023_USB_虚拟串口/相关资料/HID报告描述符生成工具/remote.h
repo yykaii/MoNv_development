@@ -1,0 +1,53 @@
+// J:\电子资料\USB\HID\MSDEV\Projects\test\remote.h
+
+
+char ReportDescriptor[91] = {
+    0x05, 0x0c,                    // USAGE_PAGE (Consumer Devices)
+    0x09, 0x01,                    // USAGE (Consumer Control)
+    0xa1, 0x01,                    // COLLECTION (Application)
+    0x09, 0x02,                    //   USAGE (Numeric Key Pad)
+    0xa1, 0x02,                    //   COLLECTION (Logical)
+    0x05, 0x09,                    //     USAGE_PAGE (Button)
+    0x19, 0x01,                    //     USAGE_MINIMUM (Button 1)
+    0x29, 0x0a,                    //     USAGE_MAXIMUM (Button 10)
+    0x15, 0x01,                    //     LOGICAL_MINIMUM (1)
+    0x25, 0x0a,                    //     LOGICAL_MAXIMUM (10)
+    0x75, 0x04,                    //     REPORT_SIZE (4)
+    0x95, 0x01,                    //     REPORT_COUNT (1)
+    0x81, 0x00,                    //     INPUT (Data,Ary,Abs)
+    0xc0,                          //   END_COLLECTION
+    0x05, 0x0c,                    //   USAGE_PAGE (Consumer Devices)
+    0x09, 0x86,                    //   USAGE (Channel)
+    0x09, 0xe0,                    //   USAGE (Volume)
+    0x15, 0xff,                    //   LOGICAL_MINIMUM (-1)
+    0x25, 0x01,                    //   LOGICAL_MAXIMUM (1)
+    0x75, 0x02,                    //   REPORT_SIZE (2)
+    0x95, 0x02,                    //   REPORT_COUNT (2)
+    0x81, 0x46,                    //   INPUT (Data,Var,Rel,Null)
+    0x09, 0xe2,                    //   USAGE (Mute)
+    0x09, 0x30,                    //   USAGE (Power)
+    0x09, 0x34,                    //   USAGE (Sleep Mode)
+    0x09, 0x60,                    //   USAGE (Data On Screen)
+    0x09, 0x64,                    //   USAGE (Broadcast Mode)
+    0x09, 0x83,                    //   USAGE (Recall Last)
+    0x09, 0x81,                    //   USAGE (Assign Selection)
+    0x15, 0x01,                    //   LOGICAL_MINIMUM (1)
+    0x25, 0x07,                    //   LOGICAL_MAXIMUM (7)
+    0x75, 0x04,                    //   REPORT_SIZE (4)
+    0x95, 0x01,                    //   REPORT_COUNT (1)
+    0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
+    0x09, 0x80,                    //   USAGE (Selection)
+    0xa1, 0x02,                    //   COLLECTION (Logical)
+    0x05, 0x09,                    //     USAGE_PAGE (Button)
+    0x19, 0x01,                    //     USAGE_MINIMUM (Button 1)
+    0x29, 0x03,                    //     USAGE_MAXIMUM (Button 3)
+    0x15, 0x01,                    //     LOGICAL_MINIMUM (1)
+    0x25, 0x03,                    //     LOGICAL_MAXIMUM (3)
+    0x75, 0x02,                    //     REPORT_SIZE (2)
+    0x81, 0x00,                    //     INPUT (Data,Ary,Abs)
+    0xc0,                          //   END_COLLECTION
+    0x15, 0x02,                    //   LOGICAL_MINIMUM (2)
+    0x81, 0x03,                    //   INPUT (Cnst,Var,Abs)
+    0xc0                           // END_COLLECTION
+};
+

@@ -1,0 +1,26 @@
+
+【划 重 点】
+  1-常用的STM32F103系列，STM32F103Cx是没有DAC功能的; 需STM32F103Rx规格以上芯片，才有DAC功能;
+  2-STM32F103系列，最多只有两个DAC通道，通道1为PA4, 通道2为PA5;
+  3-DAC通道最高输出模拟电压为:3300mV
+
+
+【操作说明】
+  1-代码烧录后，可用万用表，分别测量PA4和PA5排针的电压;
+
+
+【文件移植】
+ 1-复制bsp文件夹下的DAC文件夹，粘贴到相应的工程文件夹里。DAC文件夹内有两个文件：bsp_dac.c、bsp_dac.h；
+ 2-在keil左侧工程文件管理器Project中，双击某文件夹，以添加文件bsp_dac.c
+ 3-在keil里添加路径：魔术棒->c/c++->include path...增加(刚才粘贴文件夹的位置)； 
+
+
+【代码使用】 
+ 1- 在要使用DAC功能的文件中，添加：#include “bsp_dac.h";
+ 2- DAC_PA4SetVoltage(uint16_t mA), 即可在通道1即PA4引脚上输出相应电压值，参数值范围:0~3300;
+ 3- DAC_PA4SetVoltage(uint16_t mA), 即可在通道2即PA5引脚上输出相应电压值，参数值范围:0~3300;
+   
+
+【备注说明】
+   版权归魔女科技所有，请勿商用，谢谢！ 
+   https://demoboard.taobao.com 
